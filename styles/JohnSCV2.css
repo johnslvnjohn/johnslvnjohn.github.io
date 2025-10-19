@@ -1,0 +1,316 @@
+body{
+    margin:0;
+    background:#f6f6f8;
+    color:#333;
+    line-height: 1.5;
+    font-family: 'Inter','Helvetica Neue', Arial, sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+.container{
+    width:min(1100px,90%);
+    margin:0 auto;/*centers the entire container horizontally*/
+    background: #fff;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;/*for the curve of the box*/
+}
+
+.site-header{
+    text-align: center;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.logo{
+    text-align: left;
+    margin:0;
+    font-size: 36px;
+    color:#1D1D1F;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.photo{
+    padding-left: 20px; 
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.prof{
+    display: flex;
+    flex-direction: row;
+}
+
+.tagline{
+    text-align: left;
+    font-size: 16px;
+    margin-top:0px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.proff{
+    font-size: 14px;
+}
+.main{/*container for profile, experience, contact, qualification and awards*/
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+.main-column{/*container for profile & experience*/
+    display: flex;
+    order: 1;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    min-width: 0;
+    max-width: 750px;
+    padding-left: 10px;
+    padding-top: 0px;
+}
+.side-column{/*container for contact, qualification and awards*/
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+    max-width: 300px;
+    /*width:min(150px);*/
+    padding-left: 10px;
+    padding-top: 0px;
+}
+.side-column2{/*container for contact, qualification and awards*/
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 320px;
+    max-width: 320px;
+    /*width:min(150px);*/
+    padding-left: auto;
+    padding-top: 0px;
+    padding: auto;
+    background-color:#E2F8FF;
+    align-items: center;
+}
+.leftspace{/*to format the content headers*/
+    margin-left: 1px;
+    margin-bottom: 5px;
+}
+.leftspace2{/*to format the content headers*/
+    margin-left: 0;
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+.mainsub{/*to create sections for each of the content, including background colour and border*/
+    display: flex;
+    flex-direction: column;
+    background-color: #E2F8FF;
+    border-radius: 16px;/*for the curve of the box*/
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    border: 1px solid;
+    border-color: #BFDEFF;
+}
+.mainsub2{/*to create sections for each of the content, including background colour and border*/
+    display: flex;
+    flex-direction: column;
+    background-color: #E2F8FF;
+    border-radius: 16px;/*for the curve of the box*/
+    padding-left: 15px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    border: 1px solid;
+    border-color: white;
+    width: 285px;
+}
+.mainsub3{/*to create sections for each of the content, including background colour and border*/
+    display: flex;
+    flex-direction: column;
+    background-color: #E2F8FF;
+    border-radius: 16px;/*for the curve of the box*/
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border: 1px solid;
+    border-color: #BFDEFF;
+}
+.banner{/*to create sections for each of the content, including background colour and border*/
+    display: flex;
+    border-radius: 16px;/*for the curve of the box*/
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    width:285px;
+    height: 400px;
+}
+.site-footer{
+    text-align: center;
+}
+.nobullet{/*to remove bullets for contacts*/
+    list-style-type: none;
+}
+.bullets{/*list formatting of experience*/
+    display: flex;
+    align-items: baseline;
+    font-size: 14px;
+    flex-direction: column;
+    font-weight: 100;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left:0px;
+    list-style-type: square;
+}
+.font14{
+    font-size: 14px;
+}
+.duration{/*formatting for experience duration*/
+    font-size: 14px;
+    color: #6f6e73;
+    font-style: italic;
+    font-size: 12px;
+}
+.duration1{/*formatting for current experience duration*/
+    font-size: 14px;
+    color:blueviolet;
+    font-style: italic;
+    font-size: 12px;
+}
+.emp{
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+.profile{
+    margin-bottom: 0;
+}
+.contact{
+    list-style-type: none;
+    margin-top: 5px;
+    padding-top: 10px;
+}
+.eduside{
+    padding-top: 10px;
+}
+.divide2{
+    border-top:#e5e5e5 solid;
+    padding-top:10px;
+}
+.divide1{
+    margin-bottom: 5px;
+}
+.threecolumns{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap:18px;
+}
+.cols1{
+    display:flex;
+    flex-wrap:wrap;
+    order: 1;
+    margin:2px;
+    flex-grow:1;
+    flex-shrink:0;
+    flex-basis:320px;
+    max-width: 320px;
+}
+.cols2{
+    display:flex;
+    flex-wrap:wrap;
+    order:2;
+    margin:2px;
+    flex-grow:1;
+    flex-shrink:0;
+    flex-basis:320px;
+    max-width: 320px;
+}
+.cols3{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    order:3;
+    margin:2px;
+    flex-grow:1;
+    flex-shrink:0;
+    flex-basis:320px;
+    max-width: 320px;
+}
+
+.morespace{
+    padding-left: 25px;
+    padding-top: 20px;
+}
+@media (max-width: 750px) {
+    .main-column{
+        max-width:100%;
+    }
+    .side-column{
+        max-width:100%;
+    }
+    .side-column2{
+        max-width:100%;
+    }
+    .cols1{
+        max-width:100%;
+    }
+    .cols2{
+        max-width:100%;
+    }
+    .cols3{
+        max-width:100%;
+    }
+    .banner{
+        display: none;
+    }
+}
+@media (max-width: 1219px){
+    .main-column{
+        max-width: 100%;
+    }
+    .side-column2{
+        max-width: 100%;
+    }
+    .banner{
+        display: none;
+    }
+}
+h5{
+    text-align: center;
+}
+.linktop{
+    text-align: right;
+    font-size: 12px;
+}
+.heading{
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    flex-wrap: nowrap;
+    gap: 8px;
+}
+.icon{
+    height: 20px;
+    width: 20px;
+    padding-bottom: 2px;
+}
