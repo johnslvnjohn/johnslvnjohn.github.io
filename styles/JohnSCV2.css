@@ -1,11 +1,11 @@
 :root { --brand-maxw: 1200px; }
 .header-photo {
-  width: 88px; height: 88px; object-fit: cover;
-  border-radius: 50%; border: .5px solid lightgray;
+    width: 88px; height: 88px; object-fit: cover;
+    border-radius: 50%; border: .5px solid lightgray;
 }
 .hero-tagline { color:#6c757d; }
 .section-title { margin-top: 2rem; margin-bottom: .75rem; }
-footer { border-top: .5px solid rgba(0,0,0,.04); }
+.footer { border-top: .5px solid rgba(0,0,0,.04); }
 
 .navbar{
     color: rgb(91, 91, 91);
@@ -38,11 +38,11 @@ footer { border-top: .5px solid rgba(0,0,0,.04); }
     font-size: 14px;
 }
 .experience-header {
-  background-color: #f8f9fa;
-  color: black;
-  padding: 0.3rem .3rem;
-  border-radius: 0.5rem 0.5rem 0 0;
-  border-bottom: 1px solid #0d47a1;
+    background-color: #f8f9fa;
+    color: black;
+    padding: 0.3rem .3rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-bottom: 1px solid #0d47a1;
 }
 .experience-body {
     font-size: 0.9rem;
@@ -52,7 +52,52 @@ footer { border-top: .5px solid rgba(0,0,0,.04); }
 .lnheight {
     line-height: 1.8;
 }
+.contact-list {
+    padding-left: 1rem;
+}
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.section-title {
+    margin-top: 6px;
+}
+.contact-card {
+    background: url("../images/bluebanner.png") center / cover no-repeat;
+    color: black;
+    position: relative;
+    border-radius: 0.75rem;
+}
+
+.contact-card::before {
+    content:none;
+}
+
+.contact-card h2,
+.contact-card ul {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+}
+
+.contact-card li {
+    margin-bottom: 0.25rem;
+    font-size: 0.9rem;
+}
+@media (min-width: 768px){
+    .contact-card{
+        height: 100%;
+        min-height: 100%;;
+    }
+}
+@media (max-width: 767.98px){
+    .contact-card{
+        height: 0;
+        min-height: 0;
+    }
+}
 .navbar-toggler { border: 1px solid rgba(0,0,0,.15); }
 .navbar-collapse.collapse.show {
-  display: block !important;
+    display: block !important;
 }
