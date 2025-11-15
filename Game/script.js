@@ -6,6 +6,7 @@ const compImg = document.getElementById('compImg')
 const resultImg = document.getElementById('resultImg')
 const playAgain = document.getElementById("playAgainBtn");
 const timertext = document.getElementById("timertext")
+const note2 = document.getElementById("note2")
 let remaining;
 
 function startCountdown(){
@@ -20,6 +21,7 @@ function startCountdown(){
   userImg.style.display = "none";
   compImg.style.display = "none";
   resultImg.style.display = "none";
+  note2.style.display="none"
 
   buttons.forEach(btn => btn.disabled = true)
 
@@ -30,6 +32,7 @@ function startCountdown(){
       clearInterval(tick);
       countdown.textContent = "Now we shoot";
       timertext.style.display="none"
+      note2.style.display="block"
       // Enable buttons
       buttons.forEach(btn => btn.disabled = false);
     }
@@ -71,6 +74,7 @@ document.getElementById('btn1').addEventListener('click', function() {
   const result = getResult(userNum, compNum);
   showResult(result);
   playAgain.style.display = "inline-block";
+  note2.style.display="none"
 });
 
 document.getElementById('btn2').addEventListener('click', function() {
@@ -82,6 +86,7 @@ document.getElementById('btn2').addEventListener('click', function() {
   const result = getResult(userNum, compNum);
   showResult(result);
   playAgain.style.display = "inline-block";
+  note2.style.display="none"
 });
 
 document.getElementById('btn3').addEventListener('click', function() {
@@ -93,6 +98,7 @@ document.getElementById('btn3').addEventListener('click', function() {
   const result = getResult(userNum, compNum);
   showResult(result);
   playAgain.style.display = "inline-block";
+  note2.style.display="none"
 });
 
 playAgain.addEventListener("click",startCountdown);
