@@ -1,0 +1,64 @@
+body{
+    background-color: lightyellow;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    text-align: center;
+}
+
+
+.count{
+    font-size: 60px;
+    color: #a98f46;
+}
+
+.gamechoice {
+    position:relative;
+    width:100%;
+    aspect-ratio: 16/9;
+    border:none;
+    border-radius:1px;
+    color:#fff;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    overflow:hidden;
+    transition:transform .15s ease, box-shadow .15s ease, filter .2s ease;
+    height: 150px;
+    width: 150px;
+    margin: 0.5rem;
+}
+
+.gamechoice .overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    pointer-events: none;
+}
+  
+.gamechoice:disabled {
+    cursor:not-allowed;
+    filter:saturate(.2) contrast(.8) brightness(.8);
+}
+
+.result-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.box img {
+    height: 150px;
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+
+h1{
+    background-color: #a98f46;
+    padding: 3px;
+    color: white;
+}
