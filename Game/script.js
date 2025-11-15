@@ -1,19 +1,42 @@
 // --- Countdown 5 → 0, then enable buttons ---
 const countdown = document.getElementById('count');
 const buttons = Array.from(document.querySelectorAll('.gamechoice'));
-const userImg = document.getElementById('userImg')
-const compImg = document.getElementById('compImg')
-const resultImg = document.getElementById('resultImg')
+const userImg = document.getElementById('userImg');
+const compImg = document.getElementById('compImg');
+const resultImg = document.getElementById('resultImg');
 const playAgain = document.getElementById("playAgainBtn");
-const timertext = document.getElementById("timertext")
-const note2 = document.getElementById("note2")
+const note2 = document.getElementById("note2");
+const play1 = document.getElementById("play1");
+const play2 = document.getElementById("play2");
+const play3 = document.getElementById("play3");
 let remaining;
 
-function startCountdown(){
-  remaining=3;
-  countdown.textContent = remaining;
+function setText1(){
+  play1.style.display="none";
+  play2.style.display="none";
+  play3.style.display="none";
   playAgain.style.display = "none";
-  timertext.style.display="block"
+  note2.style.display="none"
+  countdown.style.display="block"
+}
+
+function setText2(){
+  play1.style.display="block";
+  play2.style.display="block";
+  play3.style.display="block";
+  playAgain.style.display = "inline-block";
+  note2.style.display="block"
+  countdown.style.display="none"
+}
+
+
+function startCountdown(){
+  setText1();
+  countdown.style.display="block";
+  const countdownWords = ["Shoot!", "Scissors", "Paper", "Rock", ".....", "Starting...", "Get Ready...."];
+  remaining=6;
+  countdown.textContent = countdownWords [remaining];
+  playAgain.style.display = "none";
   userImg.src = "";
   compImg.src = "";
   resultImg.src = "";
@@ -27,11 +50,10 @@ function startCountdown(){
 
   const tick = setInterval(function() {
     remaining--;
-    countdown.textContent = remaining;
+    countdown.textContent = countdownWords[remaining];
     if (remaining <= 0) {
       clearInterval(tick);
-      countdown.textContent = "Now we shoot";
-      timertext.style.display="none"
+      countdown.textContent = "Shoot";
       note2.style.display="block"
       // Enable buttons
       buttons.forEach(btn => btn.disabled = false);
@@ -64,6 +86,7 @@ function setImage(imgElement, num){
   imgElement.style.display="block"
 }
 
+
 // --- for play result ---
 document.getElementById('btn1').addEventListener('click', function() {
   buttons.forEach(function(btn){btn.disabled = true});
@@ -73,8 +96,7 @@ document.getElementById('btn1').addEventListener('click', function() {
   setImage(compImg, compNum);
   const result = getResult(userNum, compNum);
   showResult(result);
-  playAgain.style.display = "inline-block";
-  note2.style.display="none"
+  setText2();
 });
 
 document.getElementById('btn2').addEventListener('click', function() {
@@ -85,8 +107,7 @@ document.getElementById('btn2').addEventListener('click', function() {
   setImage(compImg, compNum);
   const result = getResult(userNum, compNum);
   showResult(result);
-  playAgain.style.display = "inline-block";
-  note2.style.display="none"
+  setText2();
 });
 
 document.getElementById('btn3').addEventListener('click', function() {
@@ -97,8 +118,7 @@ document.getElementById('btn3').addEventListener('click', function() {
   setImage(compImg, compNum);
   const result = getResult(userNum, compNum);
   showResult(result);
-  playAgain.style.display = "inline-block";
-  note2.style.display="none"
+  setText2();
 });
 
 playAgain.addEventListener("click",startCountdown);

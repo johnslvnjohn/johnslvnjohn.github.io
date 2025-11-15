@@ -6,7 +6,7 @@ body{
 
 
 .count{
-    font-size: 60px;
+    font-size: 30px;
     color: #a98f46;
 }
 
@@ -61,6 +61,7 @@ h1{
     background-color: #a98f46;
     padding: 3px;
     color: white;
+    font-size: 40px;
 }
 
 .gamechoice img{
