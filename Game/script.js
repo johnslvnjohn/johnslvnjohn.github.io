@@ -25,7 +25,7 @@ function setText2(){
   play2.style.display="block";
   play3.style.display="block";
   playAgain.style.display = "inline-block";
-  note2.style.display="block"
+  note2.style.display="none"
   countdown.style.display="none"
 }
 
