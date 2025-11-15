@@ -51,8 +51,8 @@ body{
 }
 
 .box img {
-    height: 150px;
-    width: 180px;
+    max-width: 40%;
+    height: auto;
     display: block;
     margin: 0 auto;
 }
@@ -61,4 +61,38 @@ h1{
     background-color: #a98f46;
     padding: 3px;
     color: white;
+}
+
+.gamechoice img{
+    max-width: 100%;
+    height: auto;
+}
+
+#playAgainBtn {
+    padding: 10px 20px;
+    font-size: 1rem; 
+    font-weight: bold;
+    background-color:#a98f46;
+    color:white;
+    border: black;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    margin: 20px auto;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 768px) {
+
+  body {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .result-boxes {
+    grid-template-columns: 1fr;
+  }
+
 }
