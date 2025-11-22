@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grades</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+        
+    <body>
+        <h2>Enter Your Details</h2>
+        <form id="userForm">
+            <div class="rowalign">
+                <label>Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="rowalign">
+                <label>Number of Subjects</label>
+                <input type="number" min="1" max="15" id="subject" required>
+                <button type="button" class="proceed" onclick="generateFields()">Proceed</button>
+            </div>
+            <p id="askmarks">Enter your marks</p>
+            <div id="marks"></div>
+            <button type="button" class="compute" onclick="computeMarks()">Calculate</button>
+            <div id="result"></div>
+            <br>
+            <button type="button" class="cancel" onclick="cancel()">Cancel</button>
+        </form>
+        <script src="script.js"></script>
+    </body>
+</html>
