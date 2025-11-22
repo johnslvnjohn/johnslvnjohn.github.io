@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="styleg.css">
+    <title>Game</title>
+    <link rel="icon" type="image/png" href="icon.png">
+  </head>
+  <body>
+    <main class="mains">
+      <h1>Rock | Paper | Scissors</h1>
+      <button id="startBtn" onclick="startGame()">Start</button>
+      <div class="count" id="count">6</div>
+      <br>
+      <div class="note2" id="note2"><h4>Click one of the below three options to shoot</h4></div>
+      <div class="grid" id="btnGrid" aria-live="polite">
+        <!-- Button 1 -->
+        <button class="gamechoice" id="btn1" disabled>
+          <img class="overlay" src="Rock.png" alt="A picture of hand signal for Rock">
+        </button>
+
+        <!-- Button 2 -->
+        <button class="gamechoice" id="btn2" disabled>
+          <img class="overlay" src="Paper.png" alt="A picture of hand signal for Paper">
+        </button>
+
+        <!-- Button 3 -->
+        <button class="gamechoice" id="btn3" disabled>
+          <img class="overlay" src="Scissors.png" alt="A picture of hand signal for Scissors">
+        </button>
+      </div>
+      <hr class="divider">
+      <div class="result-boxes">
+        <div class="box" id="userBox">
+          <h3 id="play1">You Played</h3>
+          <img id="userImg"/>
+        </div>
+
+        <div class="box" id="computerBox">
+          <h3 id="play2">Computer Played</h3>
+          <img id="compImg"/>
+        </div>
+
+        <div class="box" id="resultBox">
+          <h3 id="play3">Result</h3>
+          <img id="resultImg"/>
+        </div>
+      </div>
+      <br>
+      <div class="playagain">
+        <button id="playAgainBtn" style="display: none;">Play again</button>
+      </div>
+    </main>
+    <script src="script2.js"></script>
+  </body>
+</html>
