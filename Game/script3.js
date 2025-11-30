@@ -10,6 +10,7 @@ const play1 = document.getElementById("play1");
 const play2 = document.getElementById("play2");
 const play3 = document.getElementById("play3");
 const startBtn = document.getElementById("startBtn");
+const summaryMessage = document.getElementById("message");
 const maxplay=5;
 let remaining;
 let playCount = 0;
@@ -68,6 +69,8 @@ function startGame(){
     startBtn.style.display="none";
     playCount=0;
     startCountdown();
+    summaryMessage.textContent="";
+    summaryMessage.style.display="none"
 }
 
 function startCountdown(){
@@ -142,16 +145,16 @@ function recordgame(user, comp, result){
 
 function createSummarymessage(){
     let lines = [];
-    lines[lines.length]="Game summary:";
+    lines[lines.length]="Game Summary:";
     lines.length++;
 
     for (let i=0; i<userchoice.length; i++){
         const game = i +1;
         const userword = choiceword(userchoice[i]);
         const compword = choiceword(compchoice[i]);
-        const resultword = resultrecord[i].toUppercase();//https://www.w3schools.com/jsref/jsref_touppercase.asp
+        const resultword = resultrecord[i].toUpperCase();//https://www.w3schools.com/jsref/jsref_touppercase.asp
 
-        lines[lines.length]="Game "+(i+1)+": You - "+userword+", Computer - "+compword+" => "+resultword;
+        lines[lines.length]="Game "+(i+1)+": You - "+userword+"  |  Computer - "+compword+"  =>  "+resultword;
         lines.length++; 
     }
 
@@ -165,12 +168,10 @@ function playnum(result){
     gameOverMess="";
     if (result==="win"){
         gameOver=true;
-        const summary=createSummarymessage();
-        gameOverMess="You won! The Games ends, click start if you wish to play again \n"+summary;
+        gameOverMess="You won! The Games ends, click start if you wish to play again";
     } else if (playCount >=maxplay){
         gameOver=true;
-        const summary=createSummarymessage();
-        gameOverMess="You have played 5 times, click start if you wish to play again \n"+summary;
+        gameOverMess="You have played 5 times, click start if you wish to play again";
     } 
     setText2();
 }
@@ -220,6 +221,9 @@ document.getElementById('btn3').addEventListener('click', function() {
 playAgain.addEventListener("click",() => {
     if (gameOver){
         alert(gameOverMess);
+        const message=createSummarymessage();
+        summaryMessage.textContent=message;
+        summaryMessage.style.display="block";
         setTimeout(()=> {
             showStartScreen();
             gameOver=false;
